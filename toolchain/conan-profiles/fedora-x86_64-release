@@ -1,0 +1,8 @@
+[settings]
+os=Linux
+os.distro=fedora-33
+arch=x86_64
+compiler=gcc
+compiler.version=10
+compiler.libcxx=libstdc++11
+build_type=Release

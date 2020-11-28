@@ -1,0 +1,15 @@
+[settings]
+os=Android
+os.api_level=28
+arch=armv8
+compiler=clang
+compiler.version=8
+compiler.libcxx=libc++
+build_type=Release
+
+[build_requires]
+
+[env]
+CONAN_CMAKE_CUSTOM_ANDROID_ABI=arm64
+CONAN_CMAKE_CUSTOM_ANDOIR_ARM_NEON=ON
+CONAN_CMAKE_TOOLCHAIN_FILE=

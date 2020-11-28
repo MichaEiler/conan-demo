@@ -1,0 +1,9 @@
+[settings]
+os=Windows
+arch=x86_64
+compiler=visual_studio
+compiler.version=16
+compiler.runtime=MD
+compiler.toolset=v142
+build_type=Release
+

@@ -1,0 +1,12 @@
+[settings]
+os=Linux
+os.distro=ubuntu-20.04
+arch=armv8
+compiler=gcc
+compiler.version=8
+compiler.libcxx=libstdc++11
+build_type=Release
+
+[env]
+# https://docs.conan.io/en/latest/systems_cross_building/cross_building.html
+
