@@ -14,7 +14,7 @@ class DemoConan(ConanFile):
     default_options = { "shared": False }
 
     git_url = "git@github.com:MichaEiler/conan-demo.git"
-    git_revision = "62e141a"
+    git_tag = "v1.0"
     src_path = "conan-demo/src/libdemo/"
 
     def configure(self):
@@ -29,13 +29,13 @@ class DemoConan(ConanFile):
 
     def requirements(self):
         # define dependencies here:
-        #self.requires("boost/1.73.0")
+        #self.requires("boost/1.73.0@user/channel")
         #self.options["boost"].shared = self.option.shared
         pass
 
     def source(self):
         self.run(f"git clone {self.git_url}")
-        self.run(f"cd {self.src_path} && git checkout {self.git_revision}")
+        self.run(f"cd {self.src_path} && git checkout {self.git_tag}")
 
         # in case of required changes to some source code or build files within the git repository
         # add the patch to exports_sources and apply it here
