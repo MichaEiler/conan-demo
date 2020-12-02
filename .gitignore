@@ -1,1 +1,2 @@
-build/
+src/libdemo/build/
+src/demo-tool/build/

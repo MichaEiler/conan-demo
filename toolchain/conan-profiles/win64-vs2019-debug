@@ -1,7 +1,7 @@
 [settings]
 os=Windows
 arch=x86_64
-compiler=visual_studio
+compiler=Visual Studio
 compiler.version=16
 compiler.runtime=MDd
 compiler.toolset=v142
