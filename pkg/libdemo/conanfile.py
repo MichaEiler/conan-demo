@@ -13,7 +13,7 @@ class DemoConan(ConanFile):
     options = { "shared": [True, False] }
     default_options = { "shared": False }
 
-    git_url = "git@github.com:MichaEiler/conan-demo.git"
+    git_url = "https://github.com/MichaEiler/conan-demo.git"
     git_tag = "v1.0"
     src_path = "conan-demo/src/libdemo/"
 
