@@ -13,6 +13,7 @@ class DemoConan(ConanFile):
     options = { "shared": [True, False] }
     default_options = { "shared": False }
 
+    git_name = "conan-demo"
     git_url = "https://github.com/MichaEiler/conan-demo.git"
     git_tag = "v1.0"
     src_path = "conan-demo/src/libdemo/"
@@ -35,7 +36,7 @@ class DemoConan(ConanFile):
 
     def source(self):
         self.run(f"git clone {self.git_url}")
-        self.run(f"cd {self.src_path} && git checkout {self.git_tag}")
+        self.run(f"cd {self.git_name} && git checkout {self.git_tag}")
 
         # in case of required changes to some source code or build files within the git repository
         # add the patch to exports_sources and apply it here
@@ -61,7 +62,7 @@ class DemoConan(ConanFile):
         # most copy operations can be handled by cmake install, in case additional files need to be copied or the CMakeLists.txt
         # does not feature an install option, this can be done here
         if self.settings.os == "Windows" and self.settings.build_type == "Debug":
-            self.copy("*.pdb", src="./Debug/", dst="lib/", keep_path=False)
+            self.copy("*.pdb", src="./Debug/", dst="bin/", keep_path=False)
 
     def package_info(self):
         # remember the cmake generated export header definitions in libdemo?
