@@ -16,7 +16,7 @@ A sample library project. It's purpose is to show how a C++ project could be str
 
     md build
     cd build
-    cmake -G"Visual Studio 16 2019" -Ax64 -Thost=x64 -DBUILD_SHARED_LIBS=ON -DDEMO_ADD_TESTS=ON -DCMAKE_INSTALL_PREFIX=./stage ..
+    cmake -G"Visual Studio 16 2019" -Ax64 -Thost=x64 -DBUILD_SHARED_LIBS=ON -DDEMO_ADD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=./stage ..
     cmake --build . --config Release --target INSTALL
 
 ## Run the Unit Tests
